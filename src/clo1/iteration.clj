@@ -43,3 +43,15 @@
 
 (println "-----------------------------------")
 
+(defn factorial-2 [number]
+  (reduce * (range 2 (inc number))))
+
+(println (time (factorial-2 10)))
+
+(println "-----------------------------------")
+
+(defn factorial-3 [number]
+  (apply * (range 2 (inc number))))
+
+(println (time (factorial-3 10)))
+
