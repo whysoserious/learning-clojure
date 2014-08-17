@@ -11,5 +11,10 @@
       (pos? number#) ~positive-expr
       true ~negative-expr)))
 
-(around-zero 0.1 "-" "0" "+")
+(around-zero 1e-16 "-" "0" "+")
+
+(do 1 2)
+
+(println (macroexpand-1
+  '(around-zero 0.1 (println "-") (println "0") (println "+"))))
 
